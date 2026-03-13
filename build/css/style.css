@@ -7,7 +7,9 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-red-500: oklch(63.7% 0.237 25.331);
     --color-emerald-500: oklch(69.6% 0.17 162.48);
+    --color-teal-200: oklch(91% 0.096 180.426);
     --spacing: 0.25rem;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
@@ -162,11 +164,32 @@
   }
 }
 @layer utilities {
+  .grid {
+    display: grid;
+  }
+  .h-16 {
+    height: calc(var(--spacing) * 16);
+  }
+  .h-32 {
+    height: calc(var(--spacing) * 32);
+  }
   .h-52 {
     height: calc(var(--spacing) * 52);
   }
+  .min-h-screen {
+    min-height: 100vh;
+  }
+  .w-16 {
+    width: calc(var(--spacing) * 16);
+  }
+  .w-32 {
+    width: calc(var(--spacing) * 32);
+  }
   .w-52 {
     width: calc(var(--spacing) * 52);
+  }
+  .place-content-center {
+    place-content: center;
   }
   .rounded-full {
     border-radius: calc(infinity * 1px);
@@ -174,14 +197,19 @@
   .bg-emerald-500 {
     background-color: var(--color-emerald-500);
   }
-  .shadow {
-    --tw-shadow: 0 1px 3px 0 var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 1px 2px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
-    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  .bg-red-500 {
+    background-color: var(--color-red-500);
+  }
+  .bg-teal-200 {
+    background-color: var(--color-teal-200);
   }
   .shadow-2xl {
     --tw-shadow: 0 25px 50px -12px var(--tw-shadow-color, rgb(0 0 0 / 0.25));
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
   }
+}
+.radial-blue {
+  background: radial-gradient(lightyellow, skyblue);
 }
 @property --tw-shadow {
   syntax: "*";
