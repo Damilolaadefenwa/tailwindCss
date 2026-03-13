@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "tailwind": "npx @tailwindcss/cli -i .lesson-2/src/input.css -o ./lesson-2/build/css/style.css --watch"
+    "tailwind": "npx @tailwindcss/cli -i .lesson-2/src/input.css -o ./lesson-2/build/css/style.css --watch",
+    "prettier": "npx prettier --write '**/*.html'"
   },
   "keywords": [],
   "author": "",
@@ -13,5 +14,9 @@
   "dependencies": {
     "@tailwindcss/cli": "^4.2.1",
     "tailwindcss": "^4.2.1"
+  },
+  "devDependencies": {
+    "prettier": "^3.8.1",
+    "prettier-plugin-tailwindcss": "^0.7.2"
   }
 }
