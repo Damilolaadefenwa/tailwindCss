@@ -1,1 +1,11 @@
+/* 1. Import Tailwind v4 */
 @import "tailwindcss";
+
+/* 2. Custom Media Queries */
+@custom-variant widescreen (@media (min-aspect-ratio: 3/2));
+@custom-variant tallscreen (@media (min-aspect-ratio: 1/2));
+
+/* Custom Utility */
+@utility section-min-height {
+    min-height: calc(100vh - 68px);
+}
