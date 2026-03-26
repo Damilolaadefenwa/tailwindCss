@@ -4,9 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "npx @tailwindcss/cli -i ./src/input.css -o ./build/css/style.css",
-    "dev": "npx @tailwindcss/cli -i ./src/input.css -o ./build/css/style.css --watch",
-
+    "build": "npx @tailwindcss/cli -i ./lesson02/src/input.css -o ./lesson02/build/css/style.css",
     "tailwind": "npx @tailwindcss/cli -i ./lesson02/src/input.css -o ./lesson02/build/css/style.css --watch",
     "prettier": "npx prettier --write \"**/*.html\""
   },
