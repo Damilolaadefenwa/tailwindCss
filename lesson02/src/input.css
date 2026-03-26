@@ -1,10 +1,19 @@
 /* 1. Import Tailwind v4 */
 @import "tailwindcss";
+
+/* Identify Javascript files */
 @source "../build/js/";     
 
 /* 2. Custom Media Queries */
 @custom-variant widescreen (@media (min-aspect-ratio: 3/2));
-@custom-variant tallscreen (@media (min-aspect-ratio: 13/20));
+@custom-variant tallscreen (@media (max-aspect-ratio: 13/20));
+
+/* Adding custom colors */
+@theme{
+    --color-papayawhip: #ffefd5;
+    --color-papayawhiplight: #fef4e4;
+    --color-papayawhipdark: #fee5bc;
+}
 
 /* Custom Utility */
 @utility section-min-height {
@@ -25,5 +34,5 @@
 
 /* custom applicatn of animation to js toggle btn */
 @utility toggle-btn {
-    @apply [&>div::before]:translate-y-0 [&>div::before]:rotate-45 [&>div::after]:translate-y-0 [&>div::after]:-rotate-45 [&>div]:bg-transparent [&>div]:rotate-720`;
+    @apply [&>div::before]:translate-y-0 [&>div::before]:rotate-45 [&>div::after]:translate-y-0 [&>div::after]:-rotate-45 [&>div]:bg-transparent [&>div]:rotate-720;
 }
