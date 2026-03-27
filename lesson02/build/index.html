@@ -24,28 +24,47 @@
         <header
             class="sticky top-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
             <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-    
                 <div class="text-2xl font-black tracking-tighter uppercase">
                     The Stellar Stitch <span class="text-blue-600 dark:text-blue-400">🚀</span>
                 </div>
-    
-                <nav class="hidden md:flex space-x-8 font-bold uppercase text-sm tracking-wider">
-                    <a href="apparel.html"
-                        class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Apparel</a>
+                <button id="hamburger-button" class="text-3xl md:hidden cursor-pointer relative w-8 h-8">
+                    <!-- &#9776; -->
+                    <div
+                        class="bg-white w-8 h-1 rounded absolute top-4 -mt-0.5 transition-all duration-500 before:content-[''] before:bg-white before:w-8 before:h-1 before:rounded before:absolute before:-translate-x-4 before:-translate-y-3 before:transition-all before:duration-500 after:bg-white after:w-8 after:h-1 after:rounded after:absolute after:-translate-x-4 after:translate-y-3 after:transition-all after:duration-500">
+                    </div>
+                </button>
+                <nav class="hidden md:flex space-x-8 font-bold uppercase text-sm tracking-wider" aria-label="main">
+                    <a href="#apparels"
+                        class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Apparels</a>
                     <a href="acmerocket.html"
                         class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Acme-Rocket</a>
-                    <a href="toys.html" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Toys
+                    <a href="#toys" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Toys
                         Collection</a>
                     <a href="#aboutUs" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">About-Us</a>
                 </nav>
-    
-                <button id="mobile-menu-btn" class="md:hidden text-3xl focus:outline-none">
-                    &#9776;
-                </button>
-    
             </div>
+        <section id="mobile-menu"
+            class="absolute top-16 bg-black w-full text-4xl flex-col justify-content-center origin-top animate-open-menu hidden">
+            <!-- <button class="text-8xl self-end px-6 cursor-pointer">&times;</button> -->
+            <nav class="flex flex-col min-h-screen items-center py-8" aria-label="mobile">
+                <a href="#apparels" class="w-full text-center py-6 hover:opacity-90">Apparels</a>
+                <a href="acmerocket.html" class="w-full text-center py-6 hover:opacity-90">Acme-Rocket</a>
+                <a href="#toys" class="w-full text-center py-6 hover:opacity-90">Toys Collection</a>
+                <a href="#aboutUs" class="w-full text-center py-6 hover:opacity-90">About-Us</a>
+            </nav>
+        </section>
         </header>
-    
+
+        <section id="mobile-menu"
+            class="hidden absolute top-0 left-0 w-full h-screen bg-white dark:bg-slate-900 text-slate-900 dark:text-white flex-col justify-center items-center text-3xl z-40 animate-open-menu">
+            <nav class="flex flex-col items-center space-y-8 font-bold uppercase tracking-widest">
+                <a href="#apparels" class="hover:text-blue-600 dark:hover:text-blue-400">Apparel</a>
+                <a href="acmeRocket.html" class="hover:text-blue-600 dark:hover:text-blue-400">Acme-Rocket</a>
+                <a href="#toys" class="hover:text-blue-600 dark:hover:text-blue-400">Toys Collection</a>
+                <a href="#aboutUs" class="hover:text-blue-600 dark:hover:text-blue-400">About-Us</a>
+            </nav>
+        </section>
+       
         <main>
             <section id="hero"
                 class="relative w-full section-min-height flex items-center justify-center text-center px-4 bg-linear-to-r from-slate-100 to-slate-200 dark:from-slate-800 dark:to-slate-950">
@@ -75,7 +94,111 @@
                 </div>
             </section>
 
-            <section class="py-20 px-4 max-w-7xl mx-auto">
+
+            <section id="apparels" class="py-20 scroll-py-1.5 px-4 max-w-7xl mx-auto">
+            
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-5xl font-extrabold uppercase tracking-tight mb-4">
+                        Featured <span class="text-blue-600 dark:text-blue-400">Apparels</span>
+                    </h2>
+                    <p class="text-slate-600 dark:text-slate-400">Suit up for the stratosphere. From extreme sky-diving gear to signature NASA streetwear, discover adventure fashion
+                    designed for stargazers, explorers, and future astronauts..</p>
+                </div>
+            
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            
+                    <div
+                        class="bg-white dark:bg-slate-800 rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 group">
+                        <div class="h-64 bg-slate-200 dark:bg-slate-700 overflow-hidden">
+                            <img src="./img/astrocap.webp" alt="Mission Commander Cap"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Mission Commander Cap</h3>
+                            <p class="text-sm text-slate-500 dark:text-slate-400 mb-4">Shield your eyes from solar glare. This
+                                adjustable, breathable cap is standard issue for every future astronaut.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-lg font-black text-blue-600 dark:text-blue-400">$25.00</span>
+                                <a href="https://wa.me/1234567890" target="_blank"
+                                    class="px-4 py-2 bg-slate-900 text-white dark:bg-slate-100 dark:text-slate-900 text-sm font-bold rounded-full hover:opacity-80 transition-opacity uppercase">
+                                    Buy Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div
+                        class="bg-white dark:bg-slate-800 rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 group">
+                        <div class="h-64 bg-slate-200 dark:bg-slate-700 overflow-hidden">
+                            <img src="./img/astrototebag.webp" alt="Lunar Payload Tote"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Lunar Payload Tote</h3>
+                            <p class="text-sm text-slate-500 dark:text-slate-400 mb-4">A heavy-duty canvas bag designed to carry
+                                your rocket blueprints, space gear, or everyday essentials.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-lg font-black text-blue-600 dark:text-blue-400">$30.00</span>
+                                <a href="https://wa.me/1234567890" target="_blank"
+                                    class="px-4 py-2 bg-slate-900 text-white dark:bg-slate-100 dark:text-slate-900 text-sm font-bold rounded-full hover:opacity-80 transition-opacity uppercase">
+                                    Buy Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div
+                        class="bg-white dark:bg-slate-800 rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 group">
+                        <div class="h-64 bg-slate-200 dark:bg-slate-700 overflow-hidden">
+                            <img src="./img/astrohelmet.webp" alt="Sky-Crusher Flight Suit"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Sky-Crusher Flight Suit</h3>
+                            <p class="text-sm text-slate-500 dark:text-slate-400 mb-4">Custom-designed adventure fashion.Built for
+                                extreme sky-diving or just cruising through space in absolute comfort.
+                            </p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-lg font-black text-blue-600 dark:text-blue-400">$150.00</span>
+                                <a href="https://wa.me/1234567890" target="_blank"
+                                    class="px-4 py-2 bg-slate-900 text-white dark:bg-slate-100 dark:text-slate-900 text-sm font-bold rounded-full hover:opacity-80 transition-opacity uppercase">
+                                    Buy Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div
+                        class="bg-white dark:bg-slate-800 rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 group">
+                        <div class="h-64 bg-slate-200 dark:bg-slate-700 overflow-hidden">
+                            <img src="./img/astroshirt.webp" alt="Stellar Launch Tee"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Stellar Launch Tee</h3>
+                            <p class="text-sm text-slate-500 dark:text-slate-400 mb-4">Our signature breathable cotton shirt
+                                featuring custom space-themed text. Ready for liftoff the moment you put it on.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-lg font-black text-blue-600 dark:text-blue-400">$35.00</span>
+                                <a href="https://wa.me/1234567890" target="_blank"
+                                    class="px-4 py-2 bg-slate-900 text-white dark:bg-slate-100 dark:text-slate-900 text-sm font-bold rounded-full hover:opacity-80 transition-opacity uppercase">
+                                    Buy Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+            
+                </div>
+            
+                <div class="text-center mt-12">
+                    <a href="#"
+                        class="inline-block text-blue-600 dark:text-blue-400 font-bold hover:underline uppercase tracking-wider text-sm">
+                        View All Apparels &rarr;
+                    </a>
+                </div>
+            </section>
+
+            <section id="toys"  class="py-15 scroll-py-1.5 px-4 max-w-7xl mx-auto">
             
                 <div class="text-center mb-12">
                     <h2 class="text-3xl md:text-5xl font-extrabold uppercase tracking-tight mb-4">
@@ -89,7 +212,7 @@
                     <div
                         class="bg-white dark:bg-slate-800 rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 group">
                         <div class="h-64 bg-slate-200 dark:bg-slate-700 overflow-hidden">
-                            <img src="https://via.placeholder.com/400x300?text=Rocket+Toy+1" alt="Rocket Toy"
+                            <img src="./img/toymechanic.webp" alt="lego-Mechanic Toy"
                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                         </div>
                         <div class="p-6">
@@ -108,7 +231,7 @@
                     <div
                         class="bg-white dark:bg-slate-800 rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 group">
                         <div class="h-64 bg-slate-200 dark:bg-slate-700 overflow-hidden">
-                            <img src="https://via.placeholder.com/400x300?text=Rocket+Toy+2" alt="Rocket Toy"
+                            <img src="./img/toyspacerover.webp" alt="Space Rover Toy"
                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                         </div>
                         <div class="p-6">
@@ -127,12 +250,12 @@
                     <div
                         class="bg-white dark:bg-slate-800 rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 group">
                         <div class="h-64 bg-slate-200 dark:bg-slate-700 overflow-hidden">
-                            <img src="https://via.placeholder.com/400x300?text=Space+Suit" alt="Space Suit"
+                            <img src="./img/toysolarglow.webp" alt="Solar System"
                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                         </div>
                         <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">Junior Astronaut</h3>
-                            <p class="text-sm text-slate-500 dark:text-slate-400 mb-4">Official training suit for kids.</p>
+                            <h3 class="text-xl font-bold mb-2">Astronaut Teacher</h3>
+                            <p class="text-sm text-slate-500 dark:text-slate-400 mb-4">Official Solar System Learning kits for kids.</p>
                             <div class="flex justify-between items-center">
                                 <span class="text-lg font-black text-blue-600 dark:text-blue-400">$35.00</span>
                                 <a href="https://wa.me/1234567890" target="_blank"
@@ -146,7 +269,7 @@
                     <div
                         class="bg-white dark:bg-slate-800 rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 group">
                         <div class="h-64 bg-slate-200 dark:bg-slate-700 overflow-hidden">
-                            <img src="https://via.placeholder.com/400x300?text=Star+Cruiser" alt="Star Cruiser"
+                            <img src="./img/toytechnicspace.webp" alt="Star tech Cruiser"
                                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                         </div>
                         <div class="p-6">
@@ -165,7 +288,7 @@
                 </div>
             
                 <div class="text-center mt-12">
-                    <a href="toys.html"
+                    <a href="#"
                         class="inline-block text-blue-600 dark:text-blue-400 font-bold hover:underline uppercase tracking-wider text-sm">
                         View All Toys &rarr;
                     </a>
@@ -222,7 +345,54 @@
                     </aside>
                 </div>
             </section>
+
         </main>
+
+        <footer class="bg-slate-900 text-slate-300 py-12 border-t border-slate-800 dark:bg-black dark:border-slate-900">
+            <div class="max-w-7xl mx-auto px-4">
+        
+                <div class="grid grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
+        
+                    <div class="col-span-2 sm:col-span-1">
+                        <div class="text-xl font-black tracking-tighter uppercase text-white mb-4">
+                            The Stellar Stitch <span class="text-blue-500">🚀</span>
+                        </div>
+                        <p class="text-sm text-slate-400 leading-relaxed">
+                            455 Astro Way<br>
+                            Fairfield, New Jersey 12345-5555<br>
+                            Email: <a href="mailto:inquiries@acmerockets.com">Inquires@StellarStitch.com</a><br>
+                            Phone: <a href="tel:+1555777555">(555) 555-57755</a>
+                        </p>
+                    </div>
+        
+                    <div>
+                        <h3 class="text-white font-bold uppercase tracking-wider text-sm mb-4">Legal</h3>
+                        <ul class="space-y-2 text-sm">
+                            <li><a href="#" class="hover:text-blue-400 transition-colors">Privacy Policy</a></li>
+                            <li><a href="#" class="hover:text-blue-400 transition-colors">Terms of Service</a></li>
+                            <li><a href="#" class="hover:text-blue-400 transition-colors">Shipping & Returns</a></li>
+                        </ul>
+                    </div>
+        
+                    <div>
+                        <h3 class="text-white font-bold uppercase tracking-wider text-sm mb-4">Connect</h3>
+                        <ul class="space-y-2 text-sm">
+                            <li><a href="https://www.instagram.com/" class="hover:text-blue-400 transition-colors">Instagram</a></li>
+                            <li><a href="https://x.com/" class="hover:text-blue-400 transition-colors">X (Twitter)</a></li>
+                            <li><a href="https://www.whatsapp.com/" class="hover:text-blue-400 transition-colors">WhatsApp</a></li>
+                        </ul>
+                    </div>
+        
+                </div>
+        
+                <div
+                    class="border-t border-slate-800 pt-8 text-center sm:text-left flex flex-col sm:flex-row justify-between items-center text-sm text-slate-500">
+                    <p>&copy; 2026 The Stellar Stitch. All rights reserved.</p>
+                    <p class="mt-2 sm:mt-0">Partnered with Acme-Rocket</p>
+                </div>
+        
+            </div>
+        </footer>
     
     </body>
 </html>
